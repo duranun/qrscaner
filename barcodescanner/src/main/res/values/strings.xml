@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="btn_ok">OK</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="code_btn_ok">OK</string>
+    <string name="code_length_error">The code can be 4 or 6 characters</string>
+    <string name="permission_denied_title">Permission Denied</string>
+    <string name="camera_permission_denied">Camera permission denied.</string>
+    <string name="do_not_disturb_mode_enabled">The camera will not be accessible until \"Do Not Disturb\" mode is disabled.</string>
+</resources>

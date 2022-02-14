@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_laser_color">#E10000</color>
+    <color name="default_border_color">#60E800</color>
+    <color name="default_padding_color">#99000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="color_green">#34D100</color>
+</resources>

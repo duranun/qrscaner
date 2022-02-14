@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_ok">Tamam</string>
+    <string name="enter_code">Kod Gir</string>
+    <string name="code_btn_ok">Tamam</string>
+    <string name="code_length_error">Kod 4 veya 6 karakter olabilir.</string>
+    <string name="permission_denied_title">İzin Reddedildi</string>
+    <string name="camera_permission_denied">Kamera izni reddedildi.</string>
+    <string name="do_not_disturb_mode_enabled">\"Rahatsız Etmeyin"\ modu devre dışı bırakılana kadar kameraya erişilemez.</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CameraView">
+        <attr name="qrLineColor" format="reference" />
+        <attr name="qrLineWidth" format="dimension" />
+        <attr name="qrLineBorderWidth" format="dimension" />
+        <attr name="qrFrameHeight" format="dimension">
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="qrFrameWidth" format="dimension">
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="qrCornerRadius" format="dimension" />    </declare-styleable>
+</resources>

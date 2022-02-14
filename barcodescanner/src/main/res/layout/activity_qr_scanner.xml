@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.martitech.barcodescanner.helpers.CameraView
+        android:id="@+id/camView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrCornerRadius="4dp"
+        app:qrFrameHeight="220dp"
+        app:qrFrameWidth="220dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/codeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/default_padding_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:autofillHints="false"
+            android:background="@drawable/code_free_text_shape"
+            android:ems="10"
+            android:digits="ABCDEFGHIJKLMNOPRSTUVYZXWQ0123456789"
+            android:gravity="center"
+            android:hint="@string/enter_code"
+            android:inputType="textCapCharacters"
+            android:longClickable="false"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btnQrScannerOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/code_button_bg"
+            android:text="@string/code_btn_ok" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_baseline_close_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:shadowColor="@color/color_black"
+            android:shadowRadius="5"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/color_white"
+            tools:text="App Title"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/color_white"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/color_black"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="56dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toggleQrCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/code" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/light" />
+    </LinearLayout>
+
+</FrameLayout>

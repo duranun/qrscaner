@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Theme.Marti" parent="Theme.MaterialComponents.Light" />
+
+    <style name="Theme.Marti.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Marti.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Marti.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
