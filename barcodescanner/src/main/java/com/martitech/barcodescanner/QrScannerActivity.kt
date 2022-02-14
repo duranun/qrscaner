@@ -40,7 +40,11 @@ class QrScannerActivity : AppCompatActivity() {
         if (isGranted) {
             initCamera()
         } else {
-            showAlert(this, getString(R.string.permission_denied_title), getString(R.string.camera_permission_denied)) {
+            showAlert(
+                this,
+                getString(R.string.permission_denied_title),
+                getString(R.string.camera_permission_denied)
+            ) {
                 finish()
             }
         }
@@ -61,7 +65,7 @@ class QrScannerActivity : AppCompatActivity() {
                     binding.code.error = getString(R.string.code_length_error)
                 }
             }
-        }git
+        }
         binding.close.setOnClickListener { finish() }
     }
 
@@ -136,7 +140,7 @@ class QrScannerActivity : AppCompatActivity() {
         cameraOptions.customCodeView?.let {
             binding.toggleQrCode.setImageResource(it)
         }
-        cameraOptions.title?.let{
+        cameraOptions.title?.let {
             binding.title.text = it
         }
         binding.descriptionText visibleIf (cameraOptions.description != null)
