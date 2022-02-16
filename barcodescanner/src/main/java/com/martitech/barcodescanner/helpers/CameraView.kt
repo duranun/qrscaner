@@ -101,29 +101,33 @@ class CameraView(context: Context, attributeSet: AttributeSet) :
 
     @SuppressLint("RestrictedApi")
     private fun setUpCamera() {
-        try {
-            val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
-            cameraProviderFuture.addListener({
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
+        cameraProviderFuture.addListener({
+            try {
                 cameraProvider = cameraProviderFuture.get()
                 lensFacing =
                     CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK)
                         .build()
                 bindCameraUseCase()
                 invalidate()
-            }, ContextCompat.getMainExecutor(context))
-        } catch (cameraException: ExecutionException) {
-            val cause = cameraException.cause
-            if (cause is InitializationException && cause.cause is CameraUnavailableException) {
-                val cue = cause.cause as CameraUnavailableException
-                if (cue.reason == CameraUnavailableException.CAMERA_UNAVAILABLE_DO_NOT_DISTURB) {
-                    showAlert(
-                        this.context,
-                        msg = context.getString(R.string.do_not_disturb_mode_enabled)
-                    )
+            } catch (exception: ExecutionException) {
+                val cause = exception.cause
+                if (cause is InitializationException) {
+                    if (cause.cause is CameraUnavailableException) {
+                        val cue = cause.cause as CameraUnavailableException
+                        if (cue.reason == CameraUnavailableException.CAMERA_UNAVAILABLE_DO_NOT_DISTURB) {
+                            showAlert(
+                                this.context,
+                                msg = context.getString(R.string.do_not_disturb_mode_enabled)
+                            )
+                        }
+                    }
                 }
             }
-        }
+        }, ContextCompat.getMainExecutor(context))
+
     }
+
 
     fun addListener(listener: BarcodeListener) {
         this.barcodeListener = listener
