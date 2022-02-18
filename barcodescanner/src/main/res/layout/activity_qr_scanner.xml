@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.martitech.barcodescanner.helpers.CameraView
+    <com.duranun.barcodescanner.helpers.CameraView
         android:id="@+id/camView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
