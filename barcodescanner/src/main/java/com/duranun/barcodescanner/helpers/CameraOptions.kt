@@ -14,7 +14,7 @@ class CameraOptions(
     @DrawableRes
     var customCodeView: Int? = null,
 
-    @ColorInt
+    @ColorRes
     var laserColor: Int? = null,
 
     @ColorRes
