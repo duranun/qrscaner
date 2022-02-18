@@ -2,6 +2,7 @@ package com.duranun.barcodescanner.helpers
 
 import android.os.Parcelable
 import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import kotlinx.parcelize.Parcelize
 
@@ -16,14 +17,14 @@ class CameraOptions(
     @ColorInt
     var laserColor: Int? = null,
 
-    @ColorInt
+    @ColorRes
     var codeButtonColor: Int? = null,
 
     var lineBorderWidth: Int? = null,
 
     var lineWidth: Int? = null,
 
-    @ColorInt
+    @ColorRes
     var lineStrokeColor: Int? = null,
 
     var frameHeight: Int? = null,
