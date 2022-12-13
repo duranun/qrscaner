@@ -19,7 +19,7 @@ class BarcodeAnalyzer(
 ) :
     ImageAnalysis.Analyzer {
     private val scanner = BarcodeScanning.getClient(
-        BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE).build()
+        BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_ALL_FORMATS).build()
     )
 
     @androidx.camera.core.ExperimentalGetImage
